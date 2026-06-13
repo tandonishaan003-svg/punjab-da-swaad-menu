@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Punjab Da Swaad — Menu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --maroon:#3D1B28;
+    --marigold:#F2A93B;
+    --cream:#F6EDE4;
+    --teal:#1F5C5A;
+    --line:#E3D3C2;
+    --text:#2B2118;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    background:var(--cream);
+    color:var(--text);
+    font-family:'Work Sans', sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:480px; margin:0 auto; min-height:100vh; background:var(--cream);}
+
+  /* Header */
+  header{
+    background:var(--maroon);
+    color:var(--cream);
+    padding:36px 24px 28px;
+    text-align:center;
+    position:relative;
+  }
+  header .eyebrow{
+    font-size:11px;
+    letter-spacing:0.22em;
+    text-transform:uppercase;
+    color:var(--marigold);
+    margin-bottom:10px;
+  }
+  header h1{
+    font-family:'Fraunces', serif;
+    font-weight:700;
+    font-size:38px;
+    line-height:1.05;
+  }
+  header p{
+    margin-top:8px;
+    font-size:13px;
+    color:#E0C9BE;
+    letter-spacing:0.04em;
+  }
+  .border-pattern{
+    height:10px;
+    width:100%;
+    background:
+      repeating-linear-gradient(135deg,
+        var(--marigold) 0 8px,
+        var(--teal) 8px 16px);
+  }
+
+  /* Sections */
+  main{padding:28px 24px 60px;}
+  .category{margin-bottom:34px;}
+  .category-title{
+    font-family:'Fraunces', serif;
+    font-weight:700;
+    font-size:21px;
+    color:var(--maroon);
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:14px;
+  }
+  .category-title::after{
+    content:'';
+    flex:1;
+    height:1px;
+    background:var(--line);
+  }
+
+  .item{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    gap:10px;
+    padding:10px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .item:last-child{border-bottom:none;}
+  .item-info{flex:1;}
+  .item-name{
+    font-size:15.5px;
+    font-weight:600;
+    color:var(--text);
+  }
+  .veg-dot, .nonveg-dot{
+    display:inline-block;
+    width:9px; height:9px;
+    border:1.5px solid;
+    margin-right:7px;
+    border-radius:2px;
+    vertical-align:middle;
+    position:relative;
+    top:-1px;
+  }
+  .veg-dot{border-color:#2E7D32;}
+  .veg-dot::after{
+    content:'';
+    display:block;
+    width:5px; height:5px;
+    background:#2E7D32;
+    border-radius:50%;
+    margin:1px auto;
+  }
+  .nonveg-dot{border-color:#B23A2E;}
+  .nonveg-dot::after{
+    content:'';
+    display:block;
+    width:0; height:0;
+    border-left:4px solid transparent;
+    border-right:4px solid transparent;
+    border-bottom:6px solid #B23A2E;
+    margin:0.5px auto;
+  }
+  .item-desc{
+    font-size:12.5px;
+    color:#8A7A6C;
+    margin-top:3px;
+    line-height:1.4;
+  }
+  .item-price{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:15.5px;
+    color:var(--teal);
+    white-space:nowrap;
+  }
+
+  .chef-pick{
+    display:inline-block;
+    font-size:10px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--marigold);
+    background:var(--maroon);
+    border-radius:3px;
+    padding:1px 6px;
+    margin-left:8px;
+    position:relative;
+    top:-1px;
+  }
+
+  footer{
+    background:var(--maroon);
+    color:#D8C4B8;
+    text-align:center;
+    padding:22px 24px;
+    font-size:12px;
+    line-height:1.7;
+  }
+  footer .powered{
+    color:var(--marigold);
+    font-weight:600;
+    letter-spacing:0.03em;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Welcome to</div>
+    <h1>Punjab Da Swaad</h1>
+    <p>Tandoori &amp; North Indian Kitchen · Patiala</p>
+  </header>
+  <div class="border-pattern"></div>
+
+  <main>
+
+    <div class="category">
+      <div class="category-title">Starters</div>
+      <div class="item">
+        <div class="item-info">
+          <div class="item-name"><span class="veg-dot"></span>Paneer Tikka</div>
+          <div class="item-desc">Char-grilled cottage cheese, smoked masala marinade</div>
+        </div>
+        <div class="item-price">₹240</div>
+      </div>
+      <div class="item">
+        <div class="item-info">
+          <div class="item-name"><span class="nonveg-dot"></span>Amritsari Fish Fry</div>
+          <div class="item-desc">Carom-seed batter, served with mint chutney</div>
+        </div>
+        <div class="item-price">₹320</div>
+      </div>
+      <div class="item">
+        <div class="item-info">
+          <div class="item-name"><span class="nonveg-dot"></span>Chicken Seekh Kebab<span class="chef-pick">Chef's Pick</span></div>
+          <div class="item-desc">Hand-minced, skewer-grilled, charred onions</div>
+        </div>
+        <div class="item-price">₹280</div>
+      </div>
+    </div>
+
+    <div class="category">
+      <div class="category-title">Main Course</div>
+      <div class="item">
+        <div class="item-info">
+          <div class="item-name"><span class="veg-dot"></span>Dal Makhani</div>
+          <div class="item-desc">Slow-cooked black lentils, finished with cream</div>
+        </div>
+        <div class="item-price">₹260</div>
+      </div>
+      <div class="item">
+        <div class="item-info">
+          <div class="item-name"><span class="veg-dot"></span>Paneer Butter Masala</div>
+          <div class="item-desc">Tomato-cashew gravy, mild and rich</div>
+        </div>
+        <div class="item-price">₹270</div>
+      </div>
+      <div class="item">
+        <div class="item-info">
+          <div class="item-name"><span class="nonveg-dot"></span>Butter Chicken<span class="chef-pick">Chef's Pick</span></div>
+          <div class="item-desc">Tandoor-roasted chicken in velvet tomato gravy</div>
+        </div>
+        <div class="item-price">₹340</div>
+      </div>
+      <div class="item">
+        <div class="item-info">
+          <div class="item-name"><span class="nonveg-dot"></span>Mutton Curry</div>
+          <div class="item-desc">Bone-in mutton, slow-braised Punjabi style</div>
+        </div>
+        <div class="item-price">₹420</div>
+      </div>
+    </div>
+
+    <div class="category">
+      <div class="category-title">Breads</div>
+      <div class="item">
+        <div class="item-info">
+          <div class="item-name"><span class="veg-dot"></span>Tandoori Roti</div>
+        </div>
+        <div class="item-price">₹25</div>
+      </div>
+      <div class="item">
+        <div class="item-info">
+          <div class="item-name"><span class="veg-dot"></span>Butter Naan</div>
+        </div>
+        <div class="item-price">₹55</div>
+      </div>
+      <div class="item">
+        <div class="item-info">
+          <div class="item-name"><span class="veg-dot"></span>Lachha Paratha</div>
+        </div>
+        <div class="item-price">₹50</div>
+      </div>
+    </div>
+
+    <div class="category">
+      <div class="category-title">Rice &amp; Biryani</div>
+      <div class="item">
+        <div class="item-info">
+          <div class="item-name"><span class="veg-dot"></span>Jeera Rice</div>
+        </div>
+        <div class="item-price">₹160</div>
+      </div>
+      <div class="item">
+        <div class="item-info">
+          <div class="item-name"><span class="nonveg-dot"></span>Chicken Biryani</div>
+          <div class="item-desc">Dum-cooked with raita on the side</div>
+        </div>
+        <div class="item-price">₹290</div>
+      </div>
+    </div>
+
+    <div class="category">
+      <div class="category-title">Beverages &amp; Desserts</div>
+      <div class="item">
+        <div class="item-info">
+          <div class="item-name"><span class="veg-dot"></span>Masala Chai</div>
+        </div>
+        <div class="item-price">₹30</div>
+      </div>
+      <div class="item">
+        <div class="item-info">
+          <div class="item-name"><span class="veg-dot"></span>Sweet Lassi</div>
+        </div>
+        <div class="item-price">₹90</div>
+      </div>
+      <div class="item">
+        <div class="item-info">
+          <div class="item-name"><span class="veg-dot"></span>Gulab Jamun (2 pc)</div>
+        </div>
+        <div class="item-price">₹80</div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    Prices inclusive of taxes · Open 11 AM – 11 PM<br>
+    <span class="powered">Scan · View · Order</span> — Digital Menu
+  </footer>
+</div>
+</body>
+</html>
